@@ -14,7 +14,7 @@ There are 2 ways to enable the NetworkingFix module:
 <summary><small>SM-DLL-Injector</small></summary>
 
 1. Download the latest release of [SM-DLL-Injector](https://github.com/QuestionableM/SM-DLL-Injector/releases/latest) and follow the instructions in the [README](https://github.com/QuestionableM/SM-DLL-Injector#readme).
-2. Download the latest release of `SM-NoAutoSmartPhysics.dll` [here](https://github.com/Scrap-Mods/SM-NoAutoSmartPhysics/releases/latest).
+2. Download the latest release of `SM-NoAutoSmartPhysics.dll` [here](https://github.com/VeraDev0/SM-NoAutoSmartPhysics/releases/latest).
 3. Move `NoAutoSmartPhysics.dll` to `Steam/steamapps/common/Scrap Mechanic/Release/DLLModules` directory created by the SM-DLL-Injector installer.
 4. Launch the game.
 
@@ -23,7 +23,7 @@ There are 2 ways to enable the NetworkingFix module:
 <details>
 <summary><small>Manual Injection</small></summary>
 
-1. Download the latest release of `SM-NoAutoSmartPhysics.dll` [here](https://github.com/Scrap-Mods/SM-NoAutoSmartPhysics/releases/latest).
+1. Download the latest release of `SM-NoAutoSmartPhysics.dll` [here](https://github.com/VeraDev0/SM-NoAutoSmartPhysics/releases/latest).
 2. Launch the game.
 3. Inject `SM-NoAutoSmartPhysics.dll` using a DLL Injector of your choice.
 
