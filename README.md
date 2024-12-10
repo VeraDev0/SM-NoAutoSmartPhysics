@@ -6,6 +6,8 @@ This Patch removes the automatic switch to Smart Physics if your game is frozen 
 
 Also made by the day of the release of the **0.7.0 Build 711**
 
+> Currently tested version: **SM 0.7.3 Build 776**.
+
 ## How to Download and Enable
 
 There are 2 ways to enable the NetworkingFix module:
@@ -29,6 +31,18 @@ There are 2 ways to enable the NetworkingFix module:
 
 </details>
 
+## Tested Versions
+
+We use a offset which means its prone to break on game updates. If the update of the game is NOT listed here then its likey to not be compattable!
+
+| Game Version | DLL Version to use |
+| ------------ | ------------------ |
+| 0.7.3        | 1.1                |
+| 0.7.2        | Untested           |
+| 0.7.1        | 1.0                |
+| 0.7.0        | 1.0                |
+
+
 ## Updating the patch for future SM versions
 
 What we do is we replace the 9 bytes in TargetAddress (which is 2 instructions, see commments of OldBytes)
@@ -46,19 +60,19 @@ the case no matter what (aka jumps) and that would be it.
 
 Quite simple, just replaces some bytes in game memory and thats it.
 
-In address `0x343EE3`, We replace bytes from this
+In address `0x343E63`, We replace bytes from this
 ```
-.text:0000000140343EE3 83 FE 08          cmp     esi, 8          - Compares the PhysicsQuality if its 8
-.text:0000000140343EE6 0F 85 78 02 00 00 jnz     loc_140344164   - Jump to this loc if it failed.
+.text:0000000140343E63 83 FE 08          cmp     esi, 8          - Compares the PhysicsQuality if its 8
+.text:0000000140343E66 0F 85 78 02 00 00 jnz     loc_140344164   - Jump to this loc if it failed.
 ```
 
 to this.
 ```
-.text:0000000140343EE3 90                nop                     - Do nothing
-.text:0000000140343EE4 90                nop                     - Do nothing
-.text:0000000140343EE5 90                nop                     - Do nothing
-.text:0000000140343EE6 90                nop                     - Do nothing
-.text:0000000140343EE6 E9 78 02 00 00    jmp     loc_140344164   - Jump to this loc.
+.text:0000000140343E63 90                nop                     - Do nothing
+.text:0000000140343E64 90                nop                     - Do nothing
+.text:0000000140343E65 90                nop                     - Do nothing
+.text:0000000140343E66 90                nop                     - Do nothing
+.text:0000000140343E66 E9 78 02 00 00    jmp     loc_140344164   - Jump to this loc.
 ```
 
 Which essentially removes the physics switching entirly by not letting it being called.
