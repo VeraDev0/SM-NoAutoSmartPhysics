@@ -1,0 +1,12 @@
+{
+	"$schema": "https://raw.githubusercontent.com/ScrappySM/CarbonLauncher/refs/heads/main/schema.json",
+  
+	"name": "No Auto Smart Physics",
+	"url": "https://github.com/VeraDev0/SM-NoAutoSmartPhysics",
+  
+	"authors": [
+	  "VeraDev"
+	],
+  
+	"description": "Prevent Scrap Mechanic from automaticly switching your physics quality to Smart Physics if the physics engine experiences too much lag!"
+  }
