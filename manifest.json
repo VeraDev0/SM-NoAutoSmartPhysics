@@ -5,7 +5,7 @@
 	"url": "https://github.com/VeraDev0/SM-NoAutoSmartPhysics",
   
 	"authors": [
-	  "VeraDev"
+	  "VeraDev0"
 	],
   
 	"description": "Prevent Scrap Mechanic from automaticly switching your physics quality to Smart Physics if the physics engine experiences too much lag!"
